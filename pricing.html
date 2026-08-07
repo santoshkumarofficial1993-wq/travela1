@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing - Waypost Trip Organizer</title>
+<meta name="description" content="Waypost pricing in US dollars. A free plan forever, Voyager at $10 a month and Crew at $25 a month. All taxes, limits and cancellation terms stated up front.">
+<link rel="canonical" href="https://www.waypost.travel/pricing.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pricing - Waypost Trip Organizer">
+<meta property="og:description" content="A free plan forever, Voyager at $10 a month and Crew at $25 a month. No card to start.">
+<meta property="og:url" content="https://www.waypost.travel/pricing.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=630&fit=crop&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f8fb">
+
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var t = null;
+    try { t = localStorage.getItem('waypost-theme-v2'); } catch (e) {}
+    d.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="page-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress-rail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+      Waypost
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="how-it-works.html">How it works</a></li>
+        <li><a class="nav-link" href="pricing.html" aria-current="page">Pricing</a></li>
+        <li><a class="nav-link" href="guides.html">Guides</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
+        <i class="ph ph-moon-stars" aria-hidden="true"></i>
+        <i class="ph ph-sun-dim" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+      <a class="btn header-cta" href="#plans">Start planning</a>
+    </div>
+  </div>
+</header>
+
+<!-- Kept OUTSIDE <header>: .site-header uses backdrop-filter, which makes it the
+     containing block for position:fixed children and collapses this panel to 0 height. -->
+<div class="mobile-panel" id="mobile-panel" hidden>
+  <ul class="mobile-nav-list">
+    <li><a href="destinations.html">Destinations <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="how-it-works.html">How it works <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="pricing.html" aria-current="page">Pricing <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="guides.html">Guides <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="about.html">About <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="contact.html">Contact <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+  </ul>
+  <div class="mobile-panel-foot">
+    <a class="btn btn--block" href="#plans">Start planning</a>
+    <a class="btn btn--ghost btn--block" href="contact.html">Talk to our team</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Pricing</li>
+      </ol>
+      <h1>Priced per planner, not per traveler</h1>
+      <p class="lead">One subscription covers your trips and everyone you invite to them. Prices are in US dollars and exclude sales tax, which is calculated at checkout from your billing address.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="plans">
+    <div class="wrap">
+      <div class="head--row head reveal" style="align-items:center;">
+        <div class="head-title">
+          <h2>Choose a billing cycle</h2>
+        </div>
+        <div class="billing-switch" data-billing role="group" aria-label="Billing cycle">
+          <button type="button" data-billing-mode="monthly" aria-pressed="true">Monthly</button>
+          <button type="button" data-billing-mode="yearly" aria-pressed="false">Yearly, save 20%</button>
+        </div>
+      </div>
+
+      <div class="plans stagger">
+        <article class="plan reveal">
+          <h3 class="plan-name">Compass</h3>
+          <p class="plan-desc">For one trip at a time, planned mostly on your own.</p>
+          <p class="plan-price"><span data-price-monthly="$0" data-price-yearly="$0">$0</span> <span class="per">forever</span></p>
+          <p class="plan-billing-note" data-billing-note data-note-monthly="No card needed. No trial clock." data-note-yearly="No card needed. No trial clock.">No card needed. No trial clock.</p>
+          <a class="btn btn--ghost" href="contact.html">Start planning</a>
+          <ul class="plan-features">
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>One active trip, up to 14 days long</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Day-by-day route with travel times</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Two travel companions per trip</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Read-only share links</span></li>
+            <li class="is-off"><i class="ph ph-minus" aria-hidden="true"></i><span>No offline mode</span></li>
+            <li class="is-off"><i class="ph ph-minus" aria-hidden="true"></i><span>No shared budgets</span></li>
+          </ul>
+        </article>
+
+        <article class="plan plan--featured reveal">
+          <span class="plan-flag">Most groups pick this</span>
+          <h3 class="plan-name">Voyager</h3>
+          <p class="plan-desc">For people with more than one trip in the pipeline and a group to keep in sync.</p>
+          <p class="plan-price"><span data-price-monthly="$10" data-price-yearly="$8">$10</span> <span class="per" data-per>/ month</span></p>
+          <p class="plan-billing-note" data-billing-note data-note-monthly="Plus sales tax where applicable. Cancel any time." data-note-yearly="$96 billed yearly, plus sales tax where applicable.">Plus sales tax where applicable. Cancel any time.</p>
+          <a class="btn" href="contact.html" data-magnetic>Start planning</a>
+          <ul class="plan-features">
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Unlimited trips of any length</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Up to 12 travel companions per trip</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Shared budgets and cost splitting</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Offline day cards on mobile</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Calendar export and booking import</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Reminders before booking deadlines pass</span></li>
+          </ul>
+        </article>
+
+        <article class="plan reveal">
+          <h3 class="plan-name">Crew</h3>
+          <p class="plan-desc">For people who plan travel for others: clubs, small operators and organizers.</p>
+          <p class="plan-price"><span data-price-monthly="$25" data-price-yearly="$20">$25</span> <span class="per" data-per>/ month</span></p>
+          <p class="plan-billing-note" data-billing-note data-note-monthly="Plus sales tax where applicable. Cancel any time." data-note-yearly="$240 billed yearly, plus sales tax where applicable.">Plus sales tax where applicable. Cancel any time.</p>
+          <a class="btn btn--ghost" href="contact.html">Talk to our team</a>
+          <ul class="plan-features">
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Everything in Voyager</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Up to 40 travelers per trip</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Reusable trip templates</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Your own branding on shared plans</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Roles and edit permissions</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Priority support, one business day</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="mono mt-6">All plans include the destination library, the mobile apps and every feature update while you are subscribed.</p>
+    </div>
+  </section>
+
+  <!-- Grouped comparison, clustered not row-by-row -->
+  <section class="section section--sunken">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2>The differences that actually matter</h2>
+        <p class="lead">Two clusters, not a forty-row matrix. If something you need is missing, ask us and we will tell you plainly whether it exists.</p>
+      </div>
+
+      <div class="compare-group reveal">
+        <h3>Planning and collaboration</h3>
+        <div class="compare-scroll">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col">Capability</th>
+                <th scope="col">Compass</th>
+                <th scope="col">Voyager</th>
+                <th scope="col">Crew</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Active trips</th><td>1</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><th scope="row">Maximum trip length</th><td>14 days</td><td>Any</td><td>Any</td></tr>
+              <tr><th scope="row">Travelers per trip</th><td>2</td><td>12</td><td>40</td></tr>
+              <tr><th scope="row">Shared budgets and splitting</th><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Roles and edit permissions</th><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Reusable templates</th><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="compare-group reveal">
+        <h3>On the road and support</h3>
+        <div class="compare-scroll">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col">Capability</th>
+                <th scope="col">Compass</th>
+                <th scope="col">Voyager</th>
+                <th scope="col">Crew</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Offline day cards</th><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Booking import from email</th><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Calendar export</th><td><i class="ph ph-x no" aria-hidden="true"></i><span class="sr-only">Not included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td><td><i class="ph ph-check yes" aria-hidden="true"></i><span class="sr-only">Included</span></td></tr>
+              <tr><th scope="row">Support response target</th><td>3 business days</td><td>2 business days</td><td>1 business day</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Billing clarity -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="head reveal">
+        <h2>How billing works, in plain terms</h2>
+      </div>
+
+      <div class="prose reveal mt-6">
+        <ul>
+          <li><strong>Currency and tax.</strong> All prices are in US dollars and exclude sales tax. Any state or local sales tax that applies to your billing address is calculated and shown before you confirm.</li>
+          <li><strong>When you are charged.</strong> Monthly plans bill on the same date each month. Yearly plans bill once, on the day you subscribe, and again on that date the following year.</li>
+          <li><strong>Renewals.</strong> Subscriptions renew automatically so your trips do not lock mid-journey. We email you seven days before any yearly renewal.</li>
+          <li><strong>Canceling.</strong> Cancel from your account settings at any time. You keep access until the end of the period you have paid for, then move to the free Compass plan.</li>
+          <li><strong>Refunds.</strong> New subscriptions can be refunded in full within 14 days. Full detail is in the <a href="refund-policy.html">refund and cancellation policy</a>.</li>
+          <li><strong>Payment methods.</strong> Credit and debit cards, Apple Pay, Google Pay and ACH bank transfer, processed by our payment partner. Waypost never stores your full card details.</li>
+        </ul>
+
+        <div class="callout">
+          <p><strong>No hidden charges.</strong> There is no setup fee, no per-traveler fee and no commission on anything you book elsewhere. If a price on this page is ever out of date, the price shown at checkout is the one that applies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Single quote -->
+  <section class="section section--sunken">
+    <div class="wrap wrap--narrow">
+      <figure class="quote quote--brand reveal">
+        <blockquote>We run four club trips a year. Templates turned a fortnight of admin into an afternoon.</blockquote>
+        <figcaption class="cite">
+          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=120&h=120&q=70&fit=crop&crop=faces" alt="" loading="lazy" decoding="async" width="44" height="44">
+          <span>
+            <span class="cite-name">Yusuf Karim</span>
+            <span class="cite-role">Organizer, Front Range Trail Club, Denver</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="head reveal">
+        <h2>Billing questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Is there a free trial of the paid plans?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>There is no timed trial. The Compass plan is free permanently, and the 14-day refund window on new paid subscriptions serves the same purpose without a countdown.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I switch plans partway through a cycle?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Yes. Upgrades take effect immediately and you are charged the difference for the remaining period. Downgrades take effect at the end of your current cycle, so you keep what you paid for.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do my travel companions need to pay?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>No. Anyone you invite to a trip can view, edit and comment for free. They only need a plan of their own if they want to organize their own trips.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens to my trips if I cancel?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Every trip you have created stays readable and exportable on the free plan for as long as your account exists. You will not lose the record of trips you have already taken.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you offer student or non-profit pricing?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Yes, 50% off Voyager for full-time students and registered non-profits. <a href="contact.html">Contact us</a> with proof of status and we will apply it to your account.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap cta-inner">
+      <div class="reveal">
+        <h2>Start free, upgrade only when the trip gets serious</h2>
+        <p>No card to begin. Every plan you build on Compass carries over the moment you subscribe.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--on-brand btn--lg" href="contact.html">Start planning</a>
+        <a class="btn btn--outline-on-brand btn--lg" href="refund-policy.html">Read the refund policy</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+          Waypost
+        </a>
+        <p>Trip organizing and travel planning software for independent travelers and the groups they travel with.</p>
+        <address class="footer-legal-entity">
+          Waypost Travel Technologies, Inc.<br>
+          1550 Wewatta Street, Suite 400<br>
+          Denver, Colorado 80202, United States<br>
+          Delaware corporation &middot; EIN 88-3914027<br>
+          <a href="tel:+17205550148">+1 (720) 555-0148</a> &middot; <a href="mailto:hello@waypost.travel">hello@waypost.travel</a>
+        </address>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="guides.html">Travel guides</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="guides.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms and conditions</a></li>
+            <li><a href="refund-policy.html">Refund and cancellation</a></li>
+            <li><a href="cookie-policy.html">Cookie policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Help and support</a></li>
+            <li><a href="mailto:support@waypost.travel">support@waypost.travel</a></li>
+            <li><a href="tel:+17205550148">+1 (720) 555-0148</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Waypost Travel Technologies, Inc.. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<aside class="cookie-notice" id="cookie-notice" hidden aria-label="Cookie notice">
+  <p><strong>We use cookies.</strong> Essential cookies keep you signed in. Optional analytics cookies help us see which parts of the planner people struggle with. You choose. Read the <a href="cookie-policy.html">cookie policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn--sm" type="button" data-cookie-choice="all">Accept all</button>
+    <button class="btn btn--ghost btn--sm" type="button" data-cookie-choice="essential">Essential only</button>
+  </div>
+</aside>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

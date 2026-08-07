@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works - Waypost Trip Organizer</title>
+<meta name="description" content="See how Waypost turns dates, budget and a group of travelers into a day-by-day route with real travel times, shared costs and offline day cards.">
+<link rel="canonical" href="https://www.waypost.travel/how-it-works.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How it works - Waypost Trip Organizer">
+<meta property="og:description" content="From a rough idea to a day-by-day route your whole travel party can follow.">
+<meta property="og:url" content="https://www.waypost.travel/how-it-works.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1200&h=630&fit=crop&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f8fb">
+
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var t = null;
+    try { t = localStorage.getItem('waypost-theme-v2'); } catch (e) {}
+    d.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="page-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress-rail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+      Waypost
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="how-it-works.html" aria-current="page">How it works</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="guides.html">Guides</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
+        <i class="ph ph-moon-stars" aria-hidden="true"></i>
+        <i class="ph ph-sun-dim" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+      <a class="btn header-cta" href="pricing.html">Start planning</a>
+    </div>
+  </div>
+</header>
+
+<!-- Kept OUTSIDE <header>: .site-header uses backdrop-filter, which makes it the
+     containing block for position:fixed children and collapses this panel to 0 height. -->
+<div class="mobile-panel" id="mobile-panel" hidden>
+  <ul class="mobile-nav-list">
+    <li><a href="destinations.html">Destinations <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="how-it-works.html" aria-current="page">How it works <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="pricing.html">Pricing <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="guides.html">Guides <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="about.html">About <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="contact.html">Contact <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+  </ul>
+  <div class="mobile-panel-foot">
+    <a class="btn btn--block" href="pricing.html">Start planning</a>
+    <a class="btn btn--ghost btn--block" href="contact.html">Talk to our team</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>How it works</li>
+      </ol>
+      <h1>A trip has four stages. Waypost is built around all four</h1>
+      <p class="lead">Most planning tools help with the middle and abandon you at the airport. This is what each stage looks like inside Waypost, and what it costs you in effort.</p>
+    </div>
+  </section>
+
+  <!-- Sticky-stack scenes -->
+  <section class="section">
+    <div class="wrap">
+      <div class="scenes">
+        <article class="scene">
+          <div class="scene-inner">
+            <div class="scene-body">
+              <p class="scene-index">Stage one</p>
+              <h2>Say what kind of trip this is</h2>
+              <p class="lead">Dates or a rough window, a budget band per person, who is coming, and how hard you want to push each day. Waypost asks five questions and nothing more.</p>
+              <p style="color: var(--ink-muted); font-size: var(--fs-sm);">Takes about two minutes. You can change any answer later without losing the plan built on it.</p>
+            </div>
+            <figure class="scene-media">
+              <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=900&q=80&auto=format&fit=crop"
+                   alt="A traveler waiting at an airport gate as an aircraft climbs past the window" loading="lazy" decoding="async" width="900" height="600">
+            </figure>
+          </div>
+        </article>
+
+        <article class="scene">
+          <div class="scene-inner">
+            <div class="scene-body">
+              <p class="scene-index">Stage two</p>
+              <h2>Get a draft route, not a blank page</h2>
+              <p class="lead">Waypost lays out the days: where you sleep, how long each transfer really takes, and which afternoons have nothing scheduled on purpose.</p>
+              <p style="color: var(--ink-muted); font-size: var(--fs-sm);">Every leg carries a travel-time estimate with a buffer, so a delayed train does not silently break the following three days.</p>
+            </div>
+            <figure class="scene-media">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80&auto=format&fit=crop"
+                   alt="Snow-covered peaks rising above a valley filled with cloud at sunrise" loading="lazy" decoding="async" width="900" height="600">
+            </figure>
+          </div>
+        </article>
+
+        <article class="scene">
+          <div class="scene-inner">
+            <div class="scene-body">
+              <p class="scene-index">Stage three</p>
+              <h2>Settle it with the people coming</h2>
+              <p class="lead">Invite your travel party. Everyone can move a stop, flag a cost or open a question, and every change shows what it did to the rest of the trip.</p>
+              <p style="color: var(--ink-muted); font-size: var(--fs-sm);">Open questions sit on the day they affect until somebody closes them. Nothing important stays buried in a chat thread.</p>
+            </div>
+            <figure class="scene-media">
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=80&auto=format&fit=crop"
+                   alt="A walker standing on a rocky outcrop above green forested hills" loading="lazy" decoding="async" width="900" height="600">
+            </figure>
+          </div>
+        </article>
+
+        <article class="scene">
+          <div class="scene-inner">
+            <div class="scene-body">
+              <p class="scene-index">Stage four</p>
+              <h2>Carry it, offline, on the road</h2>
+              <p class="lead">Download the trip before you fly. Day cards, directions, stored tickets and addresses in the local script all work without a connection.</p>
+              <p style="color: var(--ink-muted); font-size: var(--fs-sm);">Edits you make with no signal sync the next time you are online, and everyone in the party sees them.</p>
+            </div>
+            <figure class="scene-media">
+              <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&q=80&auto=format&fit=crop"
+                   alt="Ornate lamps lining a bridge over the Seine at twilight" loading="lazy" decoding="async" width="900" height="600">
+            </figure>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities: dividers, not cards -->
+  <section class="section section--sunken">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2>What is doing the work underneath</h2>
+        <p class="lead">None of this is magic. It is a small number of things done carefully.</p>
+      </div>
+
+      <ul class="steps mt-7" style="list-style:none;">
+        <li class="step reveal">
+          <span class="step-num"><i class="ph ph-clock-countdown" aria-hidden="true" style="font-size:1.4rem;"></i></span>
+          <div>
+            <h3>Real transfer times, not straight lines</h3>
+            <p>Waypost uses scheduled public transport and typical road times between your stops, then adds a buffer sized to the leg. A 40-minute city hop and a 6-hour mountain drive do not get the same padding.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num"><i class="ph ph-calendar-x" aria-hidden="true" style="font-size:1.4rem;"></i></span>
+          <div>
+            <h3>Closures and opening hours built in</h3>
+            <p>Museums shut on Mondays, temples close early, and some passes only run in summer. Anything you add carries its own hours, and the day flags the conflict before you commit to it.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num"><i class="ph ph-users-four" aria-hidden="true" style="font-size:1.4rem;"></i></span>
+          <div>
+            <h3>Decisions with a record</h3>
+            <p>Every swap, vote and comment stays attached to the day it changed. Six weeks later, nobody has to remember why the Florence night got cut.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num"><i class="ph ph-currency-dollar" aria-hidden="true" style="font-size:1.4rem;"></i></span>
+          <div>
+            <h3>Costs that stay current</h3>
+            <p>Add a stay or a train and the per-person total moves immediately, in your currency, with the split rule your group actually uses.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Honest framing -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="head reveal">
+        <h2>What Waypost is, and what it is not</h2>
+        <p class="lead">Worth being clear before you spend money.</p>
+      </div>
+
+      <div class="prose reveal mt-6" style="max-width:none;">
+        <table>
+          <caption class="sr-only">Scope of the Waypost service</caption>
+          <thead>
+            <tr><th scope="col">Waypost does</th><th scope="col">Waypost does not</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Build and maintain a day-by-day plan for your trip</td>
+              <td>Sell, book or issue flights, hotels, tours or tickets</td>
+            </tr>
+            <tr>
+              <td>Estimate budgets and split costs between travelers</td>
+              <td>Take payment for any travel service or hold your money</td>
+            </tr>
+            <tr>
+              <td>Store your own booking confirmations alongside the plan</td>
+              <td>Act as a travel agent, tour operator or agent of any supplier</td>
+            </tr>
+            <tr>
+              <td>Show indicative destination costs and seasonal guidance</td>
+              <td>Guarantee prices, availability, weather or entry conditions</td>
+            </tr>
+            <tr>
+              <td>Keep your plan available offline while you travel</td>
+              <td>Provide visa, insurance, medical or immigration advice</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout" style="margin-top: var(--s6);">
+          <p><strong>Read this alongside the detail.</strong> Our <a href="disclaimer.html">disclaimer</a> explains the limits of the information on this site, and the <a href="terms.html">terms and conditions</a> set out the agreement between you and Waypost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offline split -->
+  <section class="section section--sunken">
+    <div class="wrap split">
+      <div class="reveal">
+        <h2>The part that matters once you have landed</h2>
+        <p class="lead" style="margin-top: var(--s5);">Planning tools are judged in the two weeks you are away, not the six weeks you spent preparing. Waypost is designed for a phone with 14% battery and no roaming.</p>
+        <ul class="feature-list">
+          <li>
+            <i class="ph ph-download-simple" aria-hidden="true"></i>
+            <div>
+              <strong>One tap to take the whole trip offline</strong>
+              <span>Day cards, addresses, directions and stored tickets, all available with no connection.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-translate" aria-hidden="true"></i>
+            <div>
+              <strong>Addresses in the local script</strong>
+              <span>Show the driver the address the way the driver reads it, not a transliteration.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-bell-ringing" aria-hidden="true"></i>
+            <div>
+              <strong>Reminders that respect the time zone you are in</strong>
+              <span>Not the one you booked from, and not the one your phone thinks you are in.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="btn-row" style="margin-top: var(--s6);">
+          <a class="btn" href="pricing.html" data-magnetic>Start planning <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <figure class="split-media reveal reveal--scale">
+        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=900&q=80&auto=format&fit=crop"
+             alt="Aerial view of a curved coastline and offshore hotel in Dubai" loading="lazy" decoding="async" width="900" height="675">
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="head reveal">
+        <h2>Practical questions about using it</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>How long does a first plan take to build?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>The initial draft appears within a minute of you answering the five setup questions. Getting it to a plan a group is happy with usually takes a few evenings of edits, which is the part Waypost is really built to shorten.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I import bookings I have already made?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Yes. Forward a confirmation email to your trip address and Waypost reads the dates, times and reference, then drops it on the right day. You can also add anything by hand.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does everyone in my group need to pay?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>No. One subscription covers the trip. Everyone you invite can view, edit and comment on that trip at no cost to them. They only need their own plan if they want to organize trips of their own.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Which devices does it run on?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Any modern browser on desktop, tablet or phone, plus the iOS and Android apps. Offline mode works on the mobile apps and on browsers that support offline storage.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap cta-inner">
+      <div class="reveal">
+        <h2>Try it on the trip you are already half planning</h2>
+        <p>Start on the free plan, bring your dates and your group, and see whether the draft route holds up.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--on-brand btn--lg" href="pricing.html">Start planning</a>
+        <a class="btn btn--outline-on-brand btn--lg" href="destinations.html">Browse destinations</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+          Waypost
+        </a>
+        <p>Trip organizing and travel planning software for independent travelers and the groups they travel with.</p>
+        <address class="footer-legal-entity">
+          Waypost Travel Technologies, Inc.<br>
+          1550 Wewatta Street, Suite 400<br>
+          Denver, Colorado 80202, United States<br>
+          Delaware corporation &middot; EIN 88-3914027<br>
+          <a href="tel:+17205550148">+1 (720) 555-0148</a> &middot; <a href="mailto:hello@waypost.travel">hello@waypost.travel</a>
+        </address>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="guides.html">Travel guides</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="guides.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms and conditions</a></li>
+            <li><a href="refund-policy.html">Refund and cancellation</a></li>
+            <li><a href="cookie-policy.html">Cookie policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Help and support</a></li>
+            <li><a href="mailto:support@waypost.travel">support@waypost.travel</a></li>
+            <li><a href="tel:+17205550148">+1 (720) 555-0148</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Waypost Travel Technologies, Inc.. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<aside class="cookie-notice" id="cookie-notice" hidden aria-label="Cookie notice">
+  <p><strong>We use cookies.</strong> Essential cookies keep you signed in. Optional analytics cookies help us see which parts of the planner people struggle with. You choose. Read the <a href="cookie-policy.html">cookie policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn--sm" type="button" data-cookie-choice="all">Accept all</button>
+    <button class="btn btn--ghost btn--sm" type="button" data-cookie-choice="essential">Essential only</button>
+  </div>
+</aside>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

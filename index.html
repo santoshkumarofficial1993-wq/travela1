@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waypost - Trip Organizer and Travel Planner</title>
+<meta name="description" content="Waypost turns scattered links, dates and group chats into one day-by-day travel plan your whole party can follow. Plan routes, split costs and travel offline.">
+<meta name="author" content="Waypost Travel Technologies, Inc.">
+<link rel="canonical" href="https://www.waypost.travel/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Waypost - Trip Organizer and Travel Planner">
+<meta property="og:description" content="One route your whole travel party can follow. Day-by-day plans with real travel times, shared budgets and offline day cards.">
+<meta property="og:url" content="https://www.waypost.travel/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=1200&h=630&fit=crop&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f8fb">
+
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var t = null;
+    try { t = localStorage.getItem('waypost-theme-v2'); } catch (e) {}
+    d.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=900&q=80&auto=format&fit=crop">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Waypost Travel Technologies, Inc.",
+  "alternateName": "Waypost",
+  "url": "https://www.waypost.travel/",
+  "email": "hello@waypost.travel",
+  "telephone": "+1-720-555-0148",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1550 Wewatta Street, Suite 400",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80202",
+    "addressCountry": "US"
+  }
+}
+</script>
+</head>
+
+<body class="page-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress-rail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+      Waypost
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="how-it-works.html">How it works</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="guides.html">Guides</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
+        <i class="ph ph-moon-stars" aria-hidden="true"></i>
+        <i class="ph ph-sun-dim" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+      <a class="btn header-cta" href="pricing.html">Start planning</a>
+    </div>
+  </div>
+
+</header>
+
+<!-- Kept OUTSIDE <header>: .site-header uses backdrop-filter, which makes it the
+     containing block for position:fixed children and collapses this panel to 0 height. -->
+<div class="mobile-panel" id="mobile-panel" hidden>
+  <ul class="mobile-nav-list">
+    <li><a href="destinations.html">Destinations <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="how-it-works.html">How it works <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="pricing.html">Pricing <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="guides.html">Guides <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="about.html">About <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="contact.html">Contact <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+  </ul>
+  <div class="mobile-panel-foot">
+    <a class="btn btn--block" href="pricing.html">Start planning</a>
+    <a class="btn btn--ghost btn--block" href="contact.html">Talk to our team</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- Hero: asymmetric split -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-anim">
+        <h1>Plan the whole trip. <span class="accent">Not the spreadsheet.</span></h1>
+        <p class="lead">Waypost turns scattered links, dates and group chats into one route your whole travel party can follow.</p>
+        <div class="btn-row">
+          <a class="btn btn--lg" href="pricing.html" data-magnetic>Start planning <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn--ghost btn--lg" href="how-it-works.html">See how it works</a>
+        </div>
+      </div>
+
+      <figure class="hero-media hero-media-anim">
+        <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=900&q=80&auto=format&fit=crop"
+             alt="A traveler with a red backpack looking out over a mountain lake"
+             width="900" height="1080" fetchpriority="high" decoding="async">
+        <span class="route-line" aria-hidden="true"></span>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Destination ledger -->
+  <div class="ledger" aria-hidden="true">
+    <div class="ledger-track">
+      <div class="ledger-group">
+        <span class="ledger-item"><strong>Kyoto</strong> 35.01N 135.77E</span>
+        <span class="ledger-item"><strong>Reykjavik</strong> 64.15N 21.94W</span>
+        <span class="ledger-item"><strong>Queenstown</strong> 45.03S 168.66E</span>
+        <span class="ledger-item"><strong>Marrakech</strong> 31.63N 8.01W</span>
+        <span class="ledger-item"><strong>Banff</strong> 51.18N 115.57W</span>
+        <span class="ledger-item"><strong>Lisbon</strong> 38.72N 9.14W</span>
+        <span class="ledger-item"><strong>Hanoi</strong> 21.03N 105.85E</span>
+        <span class="ledger-item"><strong>Cusco</strong> 13.53S 71.97W</span>
+      </div>
+      <div class="ledger-group">
+        <span class="ledger-item"><strong>Kyoto</strong> 35.01N 135.77E</span>
+        <span class="ledger-item"><strong>Reykjavik</strong> 64.15N 21.94W</span>
+        <span class="ledger-item"><strong>Queenstown</strong> 45.03S 168.66E</span>
+        <span class="ledger-item"><strong>Marrakech</strong> 31.63N 8.01W</span>
+        <span class="ledger-item"><strong>Banff</strong> 51.18N 115.57W</span>
+        <span class="ledger-item"><strong>Lisbon</strong> 38.72N 9.14W</span>
+        <span class="ledger-item"><strong>Hanoi</strong> 21.03N 105.85E</span>
+        <span class="ledger-item"><strong>Cusco</strong> 13.53S 71.97W</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bento -->
+  <section class="section">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2>Everything a trip needs, held in one place</h2>
+        <p class="lead">Six things that usually live in six different apps. Waypost keeps them on the same page, so the plan stays true as it changes.</p>
+      </div>
+
+      <div class="bento stagger">
+        <article class="tile tile--photo tile--a reveal">
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80&auto=format&fit=crop"
+               alt="A turquoise mountain lake below snow-dusted peaks at sunrise" loading="lazy" decoding="async" width="800" height="1000">
+          <h3>Routes that survive contact with reality</h3>
+          <p>Travel times, opening hours and transfer buffers are built into every day you plan, so the schedule holds when the train is late.</p>
+        </article>
+
+        <article class="tile tile--brand tile--b reveal">
+          <span class="tile-icon" aria-hidden="true"><i class="ph ph-users-three"></i></span>
+          <h3>Everyone plans in the same place</h3>
+          <p>Invite your travel party, settle decisions with a vote, and stop rebuilding the plan across six group chats.</p>
+        </article>
+
+        <article class="tile tile--c reveal">
+          <span class="tile-icon" aria-hidden="true"><i class="ph ph-wallet"></i></span>
+          <h3>Costs add up as you go</h3>
+          <p>Per-person budgets update the moment somebody adds a stay, a train or a tasting menu. No reconciliation at the end.</p>
+        </article>
+
+        <article class="tile tile--paper tile--d reveal">
+          <span class="tile-icon" aria-hidden="true"><i class="ph ph-map-trifold"></i></span>
+          <h3>Offline day cards</h3>
+          <p>Download the plan before you fly. Directions and tickets work with no signal.</p>
+        </article>
+
+        <article class="tile tile--photo tile--e reveal">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=700&q=80&auto=format&fit=crop"
+               alt="A lantern-lit lane leading to the Yasaka Pagoda in Kyoto at dusk" loading="lazy" decoding="async" width="700" height="500">
+          <h3>Places worth the detour</h3>
+          <p>Researched picks with the walking time from wherever you already are.</p>
+        </article>
+
+        <article class="tile tile--f reveal">
+          <span class="tile-icon" aria-hidden="true"><i class="ph ph-export"></i></span>
+          <h3>Exports that fit your trip</h3>
+          <p>Push the plan to your calendar, print a day card, or share a read-only link with anyone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="section section--sunken">
+    <div class="wrap steps-layout">
+      <div class="steps-aside reveal">
+        <h2>From a rough idea to a plan you can actually follow</h2>
+        <p class="lead" style="margin-top: var(--s5);">Four stages, usually spread over a week of evenings. Most groups reach a settled plan somewhere in stage three.</p>
+        <a class="link-arrow" href="how-it-works.html" style="margin-top: var(--s5);">Walk through the full process <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">01</span>
+          <div>
+            <h3>Tell us the shape of the trip</h3>
+            <p>Dates, budget band, who is coming and how fast you like to move. Two minutes of input, not a questionnaire.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Waypost drafts the route</h3>
+            <p>A day-by-day skeleton with realistic travel times between stops, and the nights you should not be moving.</p>
+            <figure class="step-media">
+              <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80&auto=format&fit=crop"
+                   alt="The bow of a wooden rowing boat on a still alpine lake in the Dolomites" loading="lazy" decoding="async" width="800" height="450">
+            </figure>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Everyone edits together</h3>
+            <p>Your travel party swaps stops, comments on the costs and votes on the two options nobody can agree about.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Take it with you</h3>
+            <p>Offline day cards, tickets and directions on the phone in your pocket, updating as plans shift on the road.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Destination rail -->
+  <section class="section">
+    <div class="wrap">
+      <div class="rail-head reveal">
+        <div class="head-title">
+          <h2>Where people are heading this season</h2>
+        </div>
+        <div class="rail-controls">
+          <button class="icon-btn" type="button" data-rail-prev aria-label="Scroll destinations left"><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+          <button class="icon-btn" type="button" data-rail-next aria-label="Scroll destinations right"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="rail" data-rail>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600&q=80&auto=format&fit=crop" alt="Cherry blossom branches lit above a canal in Tokyo" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Tokyo</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Japan</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 7 to 10 days</span></p>
+            <p class="dest-price">From $1,260 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&q=80&auto=format&fit=crop" alt="Whitewashed steps leading down to the sea in Santorini" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Santorini</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Greece</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 5 to 7 days</span></p>
+            <p class="dest-price">From $1,040 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600&q=80&auto=format&fit=crop" alt="Moraine Lake in Banff reflecting the surrounding peaks" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Banff</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Canada</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 8 to 12 days</span></p>
+            <p class="dest-price">From $1,585 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80&auto=format&fit=crop" alt="A gondola passing under the Rialto Bridge in Venice" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Venice</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Italy</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 4 to 6 days</span></p>
+            <p class="dest-price">From $950 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="A resort pool framed by palms and limestone karsts in Krabi" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Krabi</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Thailand</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 6 to 9 days</span></p>
+            <p class="dest-price">From $700 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=80&auto=format&fit=crop" alt="Charles Bridge crossing the Vltava in Prague at first light" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Prague</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Czechia</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 4 to 6 days</span></p>
+            <p class="dest-price">From $860 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&q=80&auto=format&fit=crop" alt="The stacked pastel houses of Manarola above the Ligurian coast" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Cinque Terre</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Italy</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 5 to 7 days</span></p>
+            <p class="dest-price">From $1,115 <small>per person</small></p>
+          </div>
+        </a>
+        <a class="dest" href="destinations.html">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80&auto=format&fit=crop" alt="The Taj Mahal seen through a sandstone gateway arch in Agra" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Agra</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> India</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> 2 to 4 days</span></p>
+            <p class="dest-price">From $230 <small>per person</small></p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="wrap mt-6">
+      <a class="link-arrow" href="destinations.html">Browse all destinations <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </section>
+
+  <!-- Split feature -->
+  <section class="section section--sunken">
+    <div class="wrap split split--wide-media">
+      <div class="reveal">
+        <h2>Built for the four people who never agree on anything</h2>
+        <p class="lead" style="margin-top: var(--s5);">Group trips fall apart in the gaps between decisions. Waypost keeps every open question visible until somebody closes it.</p>
+
+        <ul class="feature-list">
+          <li>
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
+            <div>
+              <strong>Open questions stay on the plan</strong>
+              <span>Anything unsettled sits on the day it affects, not buried in a chat thread from last Tuesday.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
+            <div>
+              <strong>Costs split the way your group actually splits them</strong>
+              <span>Per person, per couple, or however the money really works between you.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
+            <div>
+              <strong>Changes are announced, not discovered</strong>
+              <span>When someone moves a booking, everyone sees what it did to the rest of the day.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
+            <div>
+              <strong>Read-only links for people who will not sign up</strong>
+              <span>Send the plan to a parent, a hotel or a visa office without another account.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <figure class="split-media reveal reveal--wipe">
+        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=900&q=80&auto=format&fit=crop"
+             alt="A traveler with a backpack walking down a narrow cobbled street in an Italian town" loading="lazy" decoding="async" width="900" height="675">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Quotes -->
+  <section class="section">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2>What people say once the trip is over</h2>
+      </div>
+
+      <div class="quote-grid">
+        <figure class="quote reveal">
+          <blockquote>We had four people, three time zones and one week to decide. The plan settled in two evenings.</blockquote>
+          <figcaption class="cite">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&q=70&fit=crop&crop=faces" alt="" loading="lazy" decoding="async" width="44" height="44">
+            <span>
+              <span class="cite-name">Hanna Lindqvist</span>
+              <span class="cite-role">14 days across Norway</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote quote--brand reveal">
+          <blockquote>The travel-time buffers caught two connections we would have missed in Peru. That alone paid for the year.</blockquote>
+          <figcaption class="cite">
+            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=120&h=120&q=70&fit=crop&crop=faces" alt="" loading="lazy" decoding="async" width="44" height="44">
+            <span>
+              <span class="cite-name">Diego Salcedo</span>
+              <span class="cite-role">Sacred Valley and Cusco, 11 days</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <blockquote>I stopped keeping a parallel spreadsheet by day three. That has genuinely never happened before.</blockquote>
+          <figcaption class="cite">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=120&h=120&q=70&fit=crop&crop=faces" alt="" loading="lazy" decoding="async" width="44" height="44">
+            <span>
+              <span class="cite-name">Amara Okonkwo</span>
+              <span class="cite-role">Kenya and Tanzania, 3 weeks</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing preview -->
+  <section class="section section--sunken">
+    <div class="wrap">
+      <div class="head--row head reveal">
+        <div class="head-title">
+          <h2>Two ways to start, both without a card</h2>
+        </div>
+        <a class="link-arrow" href="pricing.html">Compare every plan <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="plans plans--two">
+        <article class="plan reveal">
+          <h3 class="plan-name">Compass</h3>
+          <p class="plan-desc">For one trip at a time, planned mostly on your own.</p>
+          <p class="plan-price">$0 <span class="per">forever</span></p>
+          <p class="plan-billing-note">No card. No trial clock.</p>
+          <a class="btn btn--ghost" href="pricing.html">Start planning</a>
+          <ul class="plan-features">
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>One active trip, up to 14 days</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Day-by-day route with travel times</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Two travel companions</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Read-only share links</span></li>
+          </ul>
+        </article>
+
+        <article class="plan plan--featured reveal">
+          <span class="plan-flag">Most groups pick this</span>
+          <h3 class="plan-name">Voyager</h3>
+          <p class="plan-desc">For people with more than one trip in the pipeline and a group to keep in sync.</p>
+          <p class="plan-price">$10 <span class="per">/ month</span></p>
+          <p class="plan-billing-note">Plus sales tax where applicable. Cancel any time.</p>
+          <a class="btn" href="pricing.html">Start planning</a>
+          <ul class="plan-features">
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Unlimited trips of any length</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Up to 12 travel companions per trip</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Shared budgets and cost splitting</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Offline day cards and calendar export</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span>Booking reminders before deadlines pass</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="head reveal">
+        <h2>Questions people ask before they start</h2>
+      </div>
+
+      <div class="faq reveal">
+        <details>
+          <summary>Does Waypost book flights and hotels?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>No. Waypost is planning software, not a travel agency or a booking platform. You book with whichever airline, hotel or operator you prefer, then keep the confirmation inside your plan so the whole trip sits in one place.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Where do the price estimates come from?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Destination figures on this site are indicative ranges based on typical mid-range travel costs for the season shown. They are a starting point for budgeting, not quotes, and they do not include airfare from your home city. Actual prices vary with dates, availability and how you book.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I use it without an internet connection?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Yes, on paid plans. Download your trip before you travel and the day cards, directions and stored tickets stay available offline. Anything you change offline syncs the next time you have a connection.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens to my plans if I stop paying?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>Your account drops to the free Compass plan. Every trip you have made stays readable and exportable indefinitely. You will not be able to create new trips beyond the free limits until you subscribe again.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you sell my travel data?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-answer">
+            <p>No. We do not sell or rent personal data to anybody, and we do not use your trip contents to target advertising. Our <a href="privacy-policy.html">privacy policy</a> sets out exactly what we collect, why, and how long we keep it.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-band">
+    <div class="wrap cta-inner">
+      <div class="reveal">
+        <h2>Your next trip is already half planned in twelve browser tabs</h2>
+        <p>Bring it all into one route, share it with the people coming, and stop being the person who holds the spreadsheet.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--on-brand btn--lg" href="pricing.html">Start planning</a>
+        <a class="btn btn--outline-on-brand btn--lg" href="contact.html">Talk to our team</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+          Waypost
+        </a>
+        <p>Trip organizing and travel planning software for independent travelers and the groups they travel with.</p>
+        <address class="footer-legal-entity">
+          Waypost Travel Technologies, Inc.<br>
+          1550 Wewatta Street, Suite 400<br>
+          Denver, Colorado 80202, United States<br>
+          Delaware corporation &middot; EIN 88-3914027<br>
+          <a href="tel:+17205550148">+1 (720) 555-0148</a> &middot; <a href="mailto:hello@waypost.travel">hello@waypost.travel</a>
+        </address>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="guides.html">Travel guides</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="guides.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms and conditions</a></li>
+            <li><a href="refund-policy.html">Refund and cancellation</a></li>
+            <li><a href="cookie-policy.html">Cookie policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Help and support</a></li>
+            <li><a href="mailto:support@waypost.travel">support@waypost.travel</a></li>
+            <li><a href="tel:+17205550148">+1 (720) 555-0148</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Waypost Travel Technologies, Inc.. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<aside class="cookie-notice" id="cookie-notice" hidden aria-label="Cookie notice">
+  <p><strong>We use cookies.</strong> Essential cookies keep you signed in. Optional analytics cookies help us see which parts of the planner people struggle with. You choose. Read the <a href="cookie-policy.html">cookie policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn--sm" type="button" data-cookie-choice="all">Accept all</button>
+    <button class="btn btn--ghost btn--sm" type="button" data-cookie-choice="essential">Essential only</button>
+  </div>
+</aside>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

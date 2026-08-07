@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destinations - Waypost Trip Organizer</title>
+<meta name="description" content="Browse sixteen researched destinations with indicative budgets, best months to travel and suggested trip lengths. Filter by region and start a plan in one click.">
+<link rel="canonical" href="https://www.waypost.travel/destinations.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Destinations - Waypost Trip Organizer">
+<meta property="og:description" content="Sixteen researched destinations with indicative budgets, best months and suggested trip lengths.">
+<meta property="og:url" content="https://www.waypost.travel/destinations.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200&h=630&fit=crop&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f8fb">
+
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var t = null;
+    try { t = localStorage.getItem('waypost-theme-v2'); } catch (e) {}
+    d.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="page-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress-rail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+      Waypost
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="destinations.html" aria-current="page">Destinations</a></li>
+        <li><a class="nav-link" href="how-it-works.html">How it works</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="guides.html">Guides</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
+        <i class="ph ph-moon-stars" aria-hidden="true"></i>
+        <i class="ph ph-sun-dim" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+      <a class="btn header-cta" href="pricing.html">Start planning</a>
+    </div>
+  </div>
+</header>
+
+<!-- Kept OUTSIDE <header>: .site-header uses backdrop-filter, which makes it the
+     containing block for position:fixed children and collapses this panel to 0 height. -->
+<div class="mobile-panel" id="mobile-panel" hidden>
+  <ul class="mobile-nav-list">
+    <li><a href="destinations.html" aria-current="page">Destinations <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="how-it-works.html">How it works <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="pricing.html">Pricing <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="guides.html">Guides <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="about.html">About <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="contact.html">Contact <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+  </ul>
+  <div class="mobile-panel-foot">
+    <a class="btn btn--block" href="pricing.html">Start planning</a>
+    <a class="btn btn--ghost btn--block" href="contact.html">Talk to our team</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Destinations</li>
+      </ol>
+      <h1>Sixteen places we know well enough to plan properly</h1>
+      <p class="lead">Every entry carries an indicative budget, a sensible trip length and the months worth travelling in. Pick one and Waypost drafts the days.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="filters reveal" data-filters role="group" aria-label="Filter destinations by region">
+        <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All regions</button>
+        <button class="filter-btn" type="button" data-filter="asia" aria-pressed="false">Asia</button>
+        <button class="filter-btn" type="button" data-filter="europe" aria-pressed="false">Europe</button>
+        <button class="filter-btn" type="button" data-filter="americas" aria-pressed="false">Americas</button>
+        <button class="filter-btn" type="button" data-filter="middle-east" aria-pressed="false">Middle East</button>
+      </div>
+
+      <p class="mono mb-5" aria-live="polite"><span data-result-count>16 destinations</span></p>
+
+      <div class="dest-grid stagger">
+        <a class="dest reveal" href="pricing.html" data-region="asia">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80&auto=format&fit=crop" alt="A lantern-lit lane leading to the Yasaka Pagoda in Kyoto at dusk" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Kyoto</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Japan</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Mar to May</span></p>
+            <p class="dest-price">From $1,180 <small>per person, 7 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="asia">
+          <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600&q=80&auto=format&fit=crop" alt="Cherry blossom branches lit above a canal in Tokyo" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Tokyo</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Japan</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Mar to Apr</span></p>
+            <p class="dest-price">From $1,260 <small>per person, 8 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="asia">
+          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80&auto=format&fit=crop" alt="Golden temple spires under a bright sky in northern Thailand" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Chiang Mai</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Thailand</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Nov to Feb</span></p>
+            <p class="dest-price">From $540 <small>per person, 6 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="asia">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80&auto=format&fit=crop" alt="A resort pool framed by palms and limestone karsts in Krabi" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Krabi</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Thailand</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Dec to Mar</span></p>
+            <p class="dest-price">From $700 <small>per person, 7 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="asia">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80&auto=format&fit=crop" alt="The Taj Mahal seen through a sandstone gateway arch in Agra" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Agra</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> India</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Oct to Mar</span></p>
+            <p class="dest-price">From $230 <small>per person, 3 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="asia">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80&auto=format&fit=crop" alt="Overwater villas curving across a turquoise Maldivian lagoon" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Maldives</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Indian Ocean</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Nov to Apr</span></p>
+            <p class="dest-price">From $1,520 <small>per person, 5 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&q=80&auto=format&fit=crop" alt="Whitewashed steps leading down to the sea in Santorini" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Santorini</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Greece</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> May to Jun</span></p>
+            <p class="dest-price">From $1,040 <small>per person, 6 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600&q=80&auto=format&fit=crop" alt="A gondola passing under the Rialto Bridge in Venice" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Venice</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Italy</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Apr to Jun</span></p>
+            <p class="dest-price">From $950 <small>per person, 5 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80&auto=format&fit=crop" alt="The Colosseum lit against a deep blue evening sky in Rome" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Rome</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Italy</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Apr to May</span></p>
+            <p class="dest-price">From $890 <small>per person, 5 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80&auto=format&fit=crop" alt="The Eiffel Tower above the Seine at dusk in Paris" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Paris</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> France</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Apr to Jun</span></p>
+            <p class="dest-price">From $1,080 <small>per person, 5 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=80&auto=format&fit=crop" alt="Charles Bridge crossing the Vltava in Prague at first light" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Prague</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Czechia</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> May to Sep</span></p>
+            <p class="dest-price">From $860 <small>per person, 5 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&q=80&auto=format&fit=crop" alt="The stacked pastel houses of Manarola above the Ligurian coast" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Cinque Terre</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Italy</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> May to Jun</span></p>
+            <p class="dest-price">From $1,115 <small>per person, 6 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80&auto=format&fit=crop" alt="The bow of a wooden rowing boat on a still alpine lake in the Dolomites" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Dolomites</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Italy</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Jun to Sep</span></p>
+            <p class="dest-price">From $1,305 <small>per person, 8 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="europe">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80&auto=format&fit=crop" alt="Tower Bridge and the Thames winding through London at sunrise" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>London</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> United Kingdom</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> May to Sep</span></p>
+            <p class="dest-price">From $1,370 <small>per person, 6 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="americas">
+          <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600&q=80&auto=format&fit=crop" alt="Moraine Lake in Banff reflecting the surrounding peaks" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Banff</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> Canada</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Jun to Sep</span></p>
+            <p class="dest-price">From $1,585 <small>per person, 10 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="americas">
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80&auto=format&fit=crop" alt="Aerial view of the Chicago skyline meeting Lake Michigan" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Chicago</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> United States</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> May to Oct</span></p>
+            <p class="dest-price">From $845 <small>per person, 6 days</small></p>
+          </div>
+        </a>
+
+        <a class="dest reveal" href="pricing.html" data-region="middle-east">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80&auto=format&fit=crop" alt="Dubai towers rising through morning haze around the Burj Khalifa" loading="lazy" decoding="async" width="600" height="800">
+          <div class="dest-body">
+            <h3>Dubai</h3>
+            <p class="dest-meta"><span><i class="ph ph-map-pin" aria-hidden="true"></i> United Arab Emirates</span><span><i class="ph ph-calendar-blank" aria-hidden="true"></i> Nov to Mar</span></p>
+            <p class="dest-price">From $660 <small>per person, 5 days</small></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="empty-state" data-empty-state>
+        <i class="ph ph-compass" aria-hidden="true"></i>
+        <h3>Nothing in that region yet</h3>
+        <p>We only list places we have planned enough trips through to be useful. Pick another region, or tell us where you want to go next.</p>
+        <a class="btn btn--ghost" href="contact.html" style="margin-top: var(--s5);">Suggest a destination</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selection criteria: split -->
+  <section class="section section--sunken">
+    <div class="wrap split split--reverse">
+      <figure class="split-media reveal reveal--wipe">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=900&q=80&auto=format&fit=crop"
+             alt="A hiker standing beside a stone cairn on a high mountain trail" loading="lazy" decoding="async" width="900" height="675">
+      </figure>
+      <div class="reveal">
+        <h2>Why this list is short on purpose</h2>
+        <p class="lead" style="margin-top: var(--s5);">A destination only joins the list once we can plan a genuinely useful week there. That means real transfer times, real opening hours, and someone on the team who has walked it.</p>
+        <ul class="feature-list">
+          <li>
+            <i class="ph ph-shield-check" aria-hidden="true"></i>
+            <div>
+              <strong>Checked against the season</strong>
+              <span>Best months reflect weather, crowd load and what is actually open, not just peak-season marketing.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-coins" aria-hidden="true"></i>
+            <div>
+              <strong>Budgets are honest ranges</strong>
+              <span>Mid-range stays, local transport, food and entry costs. Airfare from your home city is not included.</span>
+            </div>
+          </li>
+          <li>
+            <i class="ph ph-arrows-clockwise" aria-hidden="true"></i>
+            <div>
+              <strong>Reviewed every quarter</strong>
+              <span>Prices, transit routes and seasonal closures get a fresh pass four times a year.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal table -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="head reveal">
+        <h2>When to go, at a glance</h2>
+        <p class="lead">If your dates are fixed, start here and work backwards to the destination.</p>
+      </div>
+
+      <div class="prose reveal mt-6" style="max-width:none;">
+        <table>
+          <caption class="sr-only">Recommended destinations by travel window</caption>
+          <thead>
+            <tr><th scope="col">Travel window</th><th scope="col">Best matches</th><th scope="col">Worth avoiding</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>January to March</td><td>Krabi, Chiang Mai, Dubai, Maldives</td><td>Dolomites, Banff hiking routes</td></tr>
+            <tr><td>April to June</td><td>Kyoto, Rome, Paris, Venice, Cinque Terre</td><td>Krabi, Dubai</td></tr>
+            <tr><td>July to September</td><td>Dolomites, Banff, Prague, London</td><td>Agra, Maldives</td></tr>
+            <tr><td>October to December</td><td>Agra, Chiang Mai, Maldives, Dubai</td><td>Banff, Cinque Terre coastal paths</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="margin-top: var(--s5);">Guidance only. Confirm conditions and local advisories before you book.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap cta-inner">
+      <div class="reveal">
+        <h2>Pick a destination and the days write themselves</h2>
+        <p>Waypost drafts a route from your dates and pace, then hands the pen to everyone coming with you.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--on-brand btn--lg" href="pricing.html">Start planning</a>
+        <a class="btn btn--outline-on-brand btn--lg" href="how-it-works.html">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+          Waypost
+        </a>
+        <p>Trip organizing and travel planning software for independent travelers and the groups they travel with.</p>
+        <address class="footer-legal-entity">
+          Waypost Travel Technologies, Inc.<br>
+          1550 Wewatta Street, Suite 400<br>
+          Denver, Colorado 80202, United States<br>
+          Delaware corporation &middot; EIN 88-3914027<br>
+          <a href="tel:+17205550148">+1 (720) 555-0148</a> &middot; <a href="mailto:hello@waypost.travel">hello@waypost.travel</a>
+        </address>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="guides.html">Travel guides</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="guides.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms and conditions</a></li>
+            <li><a href="refund-policy.html">Refund and cancellation</a></li>
+            <li><a href="cookie-policy.html">Cookie policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Help and support</a></li>
+            <li><a href="mailto:support@waypost.travel">support@waypost.travel</a></li>
+            <li><a href="tel:+17205550148">+1 (720) 555-0148</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Waypost Travel Technologies, Inc.. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<aside class="cookie-notice" id="cookie-notice" hidden aria-label="Cookie notice">
+  <p><strong>We use cookies.</strong> Essential cookies keep you signed in. Optional analytics cookies help us see which parts of the planner people struggle with. You choose. Read the <a href="cookie-policy.html">cookie policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn--sm" type="button" data-cookie-choice="all">Accept all</button>
+    <button class="btn btn--ghost btn--sm" type="button" data-cookie-choice="essential">Essential only</button>
+  </div>
+</aside>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.waypost.travel/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.waypost.travel/destinations.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.waypost.travel/how-it-works.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.waypost.travel/pricing.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.waypost.travel/guides.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.waypost.travel/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.waypost.travel/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.waypost.travel/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.waypost.travel/terms.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.waypost.travel/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.waypost.travel/cookie-policy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.waypost.travel/disclaimer.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+</urlset>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookie policy - Waypost</title>
+<meta name="description" content="Every cookie and browser storage key Waypost uses, what each one does, how long it lasts and how to change your choice.">
+<link rel="canonical" href="https://www.waypost.travel/cookie-policy.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cookie policy - Waypost">
+<meta property="og:description" content="Every cookie Waypost uses, what it does and how long it lasts.">
+<meta property="og:url" content="https://www.waypost.travel/cookie-policy.html">
+<meta name="theme-color" content="#f7f8fb">
+
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    var t = null;
+    try { t = localStorage.getItem('waypost-theme-v2'); } catch (e) {}
+    d.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="page-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress-rail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+      Waypost
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="how-it-works.html">How it works</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="guides.html">Guides</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
+        <i class="ph ph-moon-stars" aria-hidden="true"></i>
+        <i class="ph ph-sun-dim" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-panel" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+      <a class="btn header-cta" href="pricing.html">Start planning</a>
+    </div>
+  </div>
+</header>
+
+<!-- Kept OUTSIDE <header>: .site-header uses backdrop-filter, which makes it the
+     containing block for position:fixed children and collapses this panel to 0 height. -->
+<div class="mobile-panel" id="mobile-panel" hidden>
+  <ul class="mobile-nav-list">
+    <li><a href="destinations.html">Destinations <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="how-it-works.html">How it works <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="pricing.html">Pricing <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="guides.html">Guides <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="about.html">About <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+    <li><a href="contact.html">Contact <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></li>
+  </ul>
+  <div class="mobile-panel-foot">
+    <a class="btn btn--block" href="pricing.html">Start planning</a>
+    <a class="btn btn--ghost btn--block" href="contact.html">Talk to our team</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Cookie policy</li>
+      </ol>
+      <h1>Cookie policy</h1>
+      <p class="lead">A short list, because we use a short list. Every key is named, with what it does and how long it survives.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap legal-layout">
+      <nav class="legal-toc" aria-label="Sections of this policy">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#what">What cookies are</a></li>
+          <li><a href="#essential">Strictly necessary</a></li>
+          <li><a href="#analytics">Optional analytics</a></li>
+          <li><a href="#none">What we do not use</a></li>
+          <li><a href="#thirdparty">Third-party requests</a></li>
+          <li><a href="#change">Changing your choice</a></li>
+          <li><a href="#browser">Browser controls</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <div class="prose">
+        <p class="legal-updated"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Last updated May 12, 2026.</p>
+
+        <h2 id="what">1. What cookies are</h2>
+        <p>A cookie is a small file a website asks your browser to store. Local storage works similarly but stays on your device rather than travelling with each request. This policy covers both, along with anything else that keeps state in your browser.</p>
+        <p>We divide them into two groups: the ones the site cannot work without, and the ones you choose.</p>
+
+        <h2 id="essential">2. Strictly necessary</h2>
+        <p>Set on every visit. These carry no advertising identifiers and are never shared with third parties.</p>
+        <table>
+          <thead>
+            <tr><th scope="col">Key</th><th scope="col">Type</th><th scope="col">Purpose</th><th scope="col">Lifetime</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>waypost-theme-v2</code></td><td>Local storage</td><td>Remembers if you switched to the dark theme. Absent until you use the toggle</td><td>Until you clear it</td></tr>
+            <tr><td><code>waypost-cookie-choice</code></td><td>Local storage</td><td>Remembers your answer to the cookie notice so we stop asking</td><td>12 months</td></tr>
+            <tr><td><code>wp_session</code></td><td>Cookie</td><td>Keeps you signed in to the planner</td><td>30 days, or until sign out</td></tr>
+            <tr><td><code>wp_csrf</code></td><td>Cookie</td><td>Protects forms against cross-site request forgery</td><td>Browser session</td></tr>
+          </tbody>
+        </table>
+        <p>Because these are strictly necessary to deliver a service you asked for, they do not require consent under the ePrivacy Directive or comparable law. Blocking them will sign you out and reset your theme on every page.</p>
+
+        <h2 id="analytics">3. Optional analytics</h2>
+        <p>Set only if you choose <strong>Accept all</strong> in the cookie notice. They tell us which parts of the planner people abandon, in aggregate.</p>
+        <table>
+          <thead>
+            <tr><th scope="col">Key</th><th scope="col">Type</th><th scope="col">Purpose</th><th scope="col">Lifetime</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>wp_a</code></td><td>Cookie</td><td>Distinguishes one browser from another so a visit is not counted twice</td><td>13 months</td></tr>
+            <tr><td><code>wp_a_s</code></td><td>Cookie</td><td>Groups page views into a single session</td><td>30 minutes</td></tr>
+          </tbody>
+        </table>
+        <p>Analytics data is aggregated, IP addresses are truncated before storage, and nothing in it is used to build an advertising profile. Declining changes nothing about the service you receive.</p>
+
+        <h2 id="none">4. What we do not use</h2>
+        <ul>
+          <li>No advertising or retargeting cookies.</li>
+          <li>No cross-site tracking pixels or social media trackers.</li>
+          <li>No fingerprinting to identify you without storage.</li>
+          <li>No selling or sharing of any of this with data brokers.</li>
+        </ul>
+        <p>If that ever changes, this page changes first and the cookie notice will ask you again before anything is set.</p>
+
+        <h2 id="thirdparty">5. Third-party requests</h2>
+        <p>Some resources on this site load from other domains. They do not set cookies here, but the request itself reaches those providers and includes your IP address:</p>
+        <table>
+          <thead><tr><th scope="col">Provider</th><th scope="col">What it serves</th></tr></thead>
+          <tbody>
+            <tr><td>Google Fonts</td><td>The typefaces used across the site</td></tr>
+            <tr><td>unpkg</td><td>The icon font used for interface icons</td></tr>
+            <tr><td>Unsplash</td><td>Destination and editorial photography</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="change">6. Changing your choice</h2>
+        <p>Clear the site data for waypost.travel in your browser and the notice will appear again on your next visit, letting you choose differently. Signed-in users can also change the setting under <strong>Settings, then Privacy</strong>.</p>
+
+        <h2 id="browser">7. Browser controls</h2>
+        <p>Every major browser lets you block or delete cookies and site data. Look under Settings, then Privacy and security, in Chrome, Firefox, Safari, Edge or Brave. Blocking strictly necessary cookies will prevent you from signing in.</p>
+        <p>We honour <code>Global Privacy Control</code> signals where your browser sends them, and treat them as a decline of optional analytics.</p>
+
+        <h2 id="contact">8. Contact</h2>
+        <p>Questions about anything on this page: <a href="mailto:privacy@waypost.travel">privacy@waypost.travel</a>, or Waypost Travel Technologies, Inc., 1550 Wewatta Street, Suite 400, Denver, Colorado 80202, United States.</p>
+        <div class="callout">
+          <p><strong>Related documents.</strong> Our <a href="privacy-policy.html">privacy policy</a> explains what happens to personal data more broadly, and the <a href="terms.html">terms and conditions</a> set out the agreement between us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true"><i class="ph ph-path"></i></span>
+          Waypost
+        </a>
+        <p>Trip organizing and travel planning software for independent travelers and the groups they travel with.</p>
+        <address class="footer-legal-entity">
+          Waypost Travel Technologies, Inc.<br>
+          1550 Wewatta Street, Suite 400<br>
+          Denver, Colorado 80202, United States<br>
+          Delaware corporation &middot; EIN 88-3914027<br>
+          <a href="tel:+17205550148">+1 (720) 555-0148</a> &middot; <a href="mailto:hello@waypost.travel">hello@waypost.travel</a>
+        </address>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="guides.html">Travel guides</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="guides.html">Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms.html">Terms and conditions</a></li>
+            <li><a href="refund-policy.html">Refund and cancellation</a></li>
+            <li><a href="cookie-policy.html">Cookie policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Help and support</a></li>
+            <li><a href="mailto:support@waypost.travel">support@waypost.travel</a></li>
+            <li><a href="tel:+17205550148">+1 (720) 555-0148</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Waypost Travel Technologies, Inc.. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on LinkedIn"><i class="ph ph-linkedin-logo" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" rel="noopener noreferrer nofollow" target="_blank" aria-label="Waypost on YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<aside class="cookie-notice" id="cookie-notice" hidden aria-label="Cookie notice">
+  <p><strong>We use cookies.</strong> Essential cookies keep you signed in. Optional analytics cookies help us see which parts of the planner people struggle with. You choose. Read the <a href="cookie-policy.html">cookie policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn--sm" type="button" data-cookie-choice="all">Accept all</button>
+    <button class="btn btn--ghost btn--sm" type="button" data-cookie-choice="essential">Essential only</button>
+  </div>
+</aside>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
